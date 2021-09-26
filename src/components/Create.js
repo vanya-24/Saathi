@@ -1,8 +1,25 @@
 import React  from "react";
 import {Link} from 'react-router-dom';
+import { db } from '../services/firebase';
 
 class Create extends React.Component {
+    
+    state = {
+        title:'',
+        subTitle:'',
+        content:'',
+    };
+    handleFormSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state);
+        db.collection('posts').add({
+            ...this.state,
+            createdAt: new Date(),
+        });
+    };
+
     render() {
+        const {title,subTitle,content} = this.state;
         return (
             <section>
                 <title>Saathi | Blogs</title>
@@ -21,21 +38,21 @@ class Create extends React.Component {
             </nav>
             <div className="create-post">
                 <h1>Create Post</h1>
-                <form>
+                <form onSubmit={this.handleFormSubmit}>
                     <div className="card-body">
                     <div class="form-group">
                         <label>Post Title</label>
-                        <input  className="form-control" />  
+                        <input  className="form-control" value={title} onChange={(e) => this.setState({title:e.target.value})} />  
                     </div>
 
                     <div class="form-group">
                         <label>Post Sub Title</label>
-                        <input className="form-control" />  
+                        <input className="form-control" value={subTitle} onChange={(e) => this.setState({ subTitle:e.target.value })} />  
                     </div>
 
                     <div class="form-group">
                         <label>Content</label>
-                        <textarea  className="form-control" cols="30" rows="10"></textarea> 
+                        <textarea  className="form-control" cols="30" rows="10" value={content} onChange={(e) => this.setState({content:e.target.value })}></textarea> 
                     </div>
                     <button className="create-post btn btn btn-success" style={{cursor:'pointer'}}>Create Post</button>
                     </div>

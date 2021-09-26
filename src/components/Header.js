@@ -45,7 +45,7 @@ class Header extends React.Component {
       <Route path="/activities"><Activities /></Route>
       <Route path="/blogs"><Blogs /></Route>
       <Route path="/create"><Create /></Route>
-      <Route path="/post/someid"><PostDetails /></Route>
+      <Route path="/post/:postId" component={PostDetails} />
       <Route exact path="/"><Home /></Route>
   </Switch>
   </Router>

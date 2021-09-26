@@ -24,5 +24,20 @@ firebase.initializeApp(firebaseConfig)
 export const auth = firebase.auth();
 export const db = firebase.firestore();
 
+window.db = db;
 // console.log(db);
 export default firebase;
+
+
+// Get Posts
+// function getPosts(){
+//     db.collection("posts").get().then(snapshot =>{
+//         snapshot.docs.forEach(docs => {
+//             console.log(docs);
+//         });
+//     }).catch(err => {
+//         console.log(err);
+//     })
+// }
+
+// getPosts();
