@@ -1,5 +1,8 @@
 // eslint-disable-next-line
 import React from "react";
+import "./Activities.css";
+import {Link} from 'react-router-dom';
+import Stress from "./Stress";
 
 
 class Activities extends React.Component{
@@ -25,10 +28,10 @@ class Activities extends React.Component{
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="Stress.html" class="card-title">Stress Reducing Activities for Everyone</a>
+                  <Link to="/Stress" class="card-title">Stress Reducing Activities for Everyone</Link>
                   <hr />
                   <p class="card-text">Stress is an inevitable part of life. Stress is something that cannot be completely removed from life. However, it can be managed. To help you making conscious efforts...</p>
-                  <a href="Stress.html" class="button button-style">Keep Reading...</a>
+                  <Link to="/Stress" class="button button-style">Keep Reading...</Link>
                 </div>
               </div>
             </div>
@@ -42,10 +45,10 @@ class Activities extends React.Component{
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="art therapy.html" class="card-title">Art Therapy activities for Instant Stress Relief</a>
+                <Link to="/art" class="card-title">Art Therapy for Instant Stress Relief</Link>
                   <hr />
                   <p class="card-text">Anni Albers appropriately quoted, “Art is something that makes you breathe with a different kind of happiness.” Since childhood whenever I hear anything related to art, it catches...</p>
-                  <a href="art therapy.html" class="button button-style">Keep Reading...</a>
+                  <Link to="/art" class="button button-style">Keep Reading...</Link>
                 </div>
               </div>
             </div>
@@ -151,7 +154,7 @@ class Activities extends React.Component{
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="../public/images/stress.jpg" alt="Card" />
+      <img class="card-img-top" src="images/stress.jpg" alt="Card" />
       <div class="card-body">
         <a href="https://youtu.be/68QvtTfQGyo"><h5 class="card-title">Ecominds and Wll Being Comes Naturally</h5></a>
         <p class="card-text">"It is hard to explain the power of nature in relieving both my physical and mental stress ..."</p>

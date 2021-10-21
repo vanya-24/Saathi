@@ -1,5 +1,4 @@
 import React from 'react';
-// import {useParams} from 'react-router-dom';
 import { db } from '../services/firebase';
 
 class  PostDetails extends React.Component {
@@ -23,13 +22,15 @@ class  PostDetails extends React.Component {
     render(){
         const { post } = this.state;
         return (
-            <div className="post-detail"  style={{paddingTop:'10rem'}}>
+            <section>
+            <div className="post-detail"  style={{paddingTop:'10rem', backgroundImage: `url("images/selfcare3.jpg")`}}>
                 <h1 style={{textAlign:'center'}} >{post.title}</h1>
                 
                 <p className="container center">
                    {post.content}
                 </p>
             </div>
+            </section>
         );
     }
 }

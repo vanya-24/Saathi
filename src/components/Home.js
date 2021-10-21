@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React from "react";
+// import "../Home.css";
 // import p1 from 'C:/Users/Vanya/Desktop/SowMinds--React/sowminds/public/images/selfcare3.jpg';
 class Home extends React.Component{
     render(){

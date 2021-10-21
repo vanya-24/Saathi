@@ -1,0 +1,42 @@
+.section{
+    background: linear-gradient(to bottom, #ccffff 0%, #ffffff 100%);
+}
+#style_1{
+    color: rgb(223, 12, 170);
+    font-size: 20px;
+}
+#style_2{
+    color: rgb(112, 55, 55);
+    font-size: 20px;
+}
+#style_3{
+    color: rgb(2, 61, 26);
+    font-size: 20px;
+}
+#style_4{
+    color: rgb(7, 55, 61);
+    font-size: 20px;
+}
+#style_5{
+    color: rgb(173, 32, 79);
+    font-size: 20px;
+}
+.link{
+    color: rgb(77, 15, 44);
+    font-family: monospace;
+    box-shadow: none;
+    font-size:20px;
+    padding:'5px';
+    text-decoration:none;
+}
+.link:hover{
+   color: darkblue;
+   text-decoration: none;
+   text-underline-position: right;
+   transform: translateX(0);
+}
+
+li{
+    font-size: 15px;
+    color: rgb(19, 85, 6);
+}

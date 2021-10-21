@@ -1,0 +1,23 @@
+.BlogCard{
+    display: inline-block;
+    flex-direction: column;
+    /* column-gap: 5px; */
+    justify-content: space-between;
+    font-size: large;
+    text-align: center;
+    /* text-justify: inter-word; */
+    /* padding-left: 50px; */
+    margin-top: 30px;
+    border: 1px solid black;
+    /* width: 10px; */
+
+}
+.button{
+    padding: 2px 13px 2px 13px;
+    text-decoration: none;
+    color: black;
+   margin: auto;
+   text-align: center;
+    /* text-decoration-style: none; */
+}
+

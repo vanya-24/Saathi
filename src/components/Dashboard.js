@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import "./Dashboard.css";
 import { auth, db, logout } from "../services/firebase";
 function Dashboard() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const history = useHistory();
   const fetchUserName = async () => {
@@ -24,6 +24,7 @@ function Dashboard() {
     if (loading) return;
     if (!user) return history.replace("/");
     fetchUserName();
+    // eslint-disable-next-line
   }, [user, loading]);
   return (
     <div className="dashboard">

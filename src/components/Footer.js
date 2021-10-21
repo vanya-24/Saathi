@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React from "react";
+import "./Footer.css";
 
 class Footer extends React.Component{
   render(){

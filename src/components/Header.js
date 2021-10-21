@@ -17,10 +17,15 @@ import Blogs from './Blogs';
 import Create from './Create';
 import Home from './Home';
 import PostDetails from "./PostDetails";
-// import { AuthProvider } from "../context/AuthContext";
+import Stress from './Stress';
+import Art from './art';
+import Peace from "./Peace";
+
 
 class Header extends React.Component {
+    // var user = auth.currentUser;
     render(){
+        // var user = auth.currentUser;
     return(
     <Router>
         <header>
@@ -29,10 +34,23 @@ class Header extends React.Component {
           <div id="mainListDiv" class="main_list">
               <ul class="navlinks">
                   <li><Link to="/">Home</Link></li>
-                  <li><a href="quiz.html">Quizzes</a></li>
+                  {/* <li><a href="quiz.html">Quizzes</a></li> */}
                   <li><Link to="/activities">Activities</Link></li>
+                  <li><Link to="/peace">Peace Session</Link></li>
                   <li><Link to="/blogs">Blogs</Link></li>
-                  <li><a href="dist/chat.html">Chat!</a></li>
+                  {/* <li><a href="dist/chat.html">Chat!</a></li> */}
+                  <li>
+                  {/* if (user) {
+                      <div>
+                      <button className="dashboard__btn" onClick={logout}>
+                        Logout
+                      </button>
+                      </div>
+} else {
+    <h1>SignUp</h1> */}
+{/* } */}
+                   
+                  </li>
                   <li><Link to="/Register">Sign Up</Link></li>
 
               </ul>
@@ -54,6 +72,9 @@ class Header extends React.Component {
       <Route path="/activities"><Activities /></Route>
       <Route path="/blogs"><Blogs /></Route>
       <Route path="/create"><Create /></Route>
+      <Route path="/Stress"><Stress /></Route>
+      <Route path="/peace"><Peace /></Route>
+      <Route path="/art"><Art /></Route>
       <Route path="/post/:postId" component={PostDetails} />
       <Route exact path="/"><Home /></Route>
   </Switch>
